@@ -2,18 +2,19 @@ import test, { Browser, Page, chromium, expect } from "@playwright/test"
 import { beforeEach } from "node:test"
 import { main_page } from "../POM/main_page"
 import { equal } from "node:assert"
+import { config } from "node:process";
 
 
 
 const launchBrowser = async (): Promise<{ browser: Browser, page: Page }> => {
     const browser = await chromium.launch();
     const page = await browser.newPage();
-    await page.goto("https://www.pokellector.com/")
     return { browser, page };
 };
 
-const launchPage =  (page:Page) : main_page=> {
-    test.setTimeout(160000)
+const launchPage =  async (page:Page) : Promise<main_page>=> {
+    test.setTimeout(160000)  
+    await page.goto("https://www.pokellector.com/")
     const main = new main_page(page)
     return main
 }
@@ -21,7 +22,7 @@ const launchPage =  (page:Page) : main_page=> {
 test.describe('My test suite', () => {
     let browser: Browser;
     let page: Page;
-
+    
     test.beforeEach(async () => {
         ({ browser, page } = await launchBrowser());
     });
@@ -34,10 +35,10 @@ test.describe('My test suite', () => {
 
 
     test("check if view all button redirect to all sets",async () => {
-        // test.setTimeout(160000)
-        // await page.goto("https://www.pokellector.com/")
-        // const main = new main_page(page)
-        const main =launchPage(page)
+        test.setTimeout(160000)
+        await page.goto("https://www.pokellector.com/")
+        const main = new main_page(page)
+        // const main =launchPage(page) 
         await main.click_on_VIEW_ALL_button()
         expect(page.url()).toEqual("https://www.pokellector.com/sets")
     })
@@ -71,10 +72,19 @@ test.describe('My test suite', () => {
     })
 
 
-
-
+    test("paradox rift",async ()=>{
+        test.setTimeout(200000)
+        await page.goto("https://www.pokellector.com/")
+        const main = new main_page(page)
+        await main.Enter_to_paradox_rift()
+        await main.get_paradox_rift().check_elements(3) 
+        
+    })
 
 });
+
+
+
 
 
 
