@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "PHPSESSID",
-      "value": "r71jn1rj5m3rjme97o6a0ngt85",
+      "value": "fdi6uq4lb34itf7937q6ra42n0",
       "domain": "www.pokellector.com",
       "path": "/",
       "expires": -1,
@@ -11,21 +11,11 @@
       "sameSite": "Lax"
     },
     {
-      "name": "UID",
-      "value": "19Ac1b70485eb1d796e7e931700942258",
-      "domain": ".scorecardresearch.com",
-      "path": "/",
-      "expires": 1735502261.490743,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
       "name": "_gid",
-      "value": "GA1.2.1901493051.1700942259",
+      "value": "GA1.2.1525702134.1701015304",
       "domain": ".pokellector.com",
       "path": "/",
-      "expires": 1701028661,
+      "expires": 1701101715,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -35,60 +25,100 @@
       "value": "1",
       "domain": ".pokellector.com",
       "path": "/",
-      "expires": 1700942319,
+      "expires": 1701015364,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
+      "name": "UID",
+      "value": "179fc4335134535fd0100801701015304",
+      "domain": ".scorecardresearch.com",
+      "path": "/",
+      "expires": 1735575315.492621,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
       "name": "NID",
-      "value": "511=b2LG7uV-QbWpkM6zpfgb4ejzoOkgUhmJlDyvqrCiJhgsvt4zeCYQoJF9ODZeQn9NQTCNkmj_vtLzY3uW2o3082HKAp0CTToNapmkMKd2mpaFpw-dY5g-5GgH3_xgEu8U9qGfFX2NWBczlnBPYUn0qFEE7XXL8HZscC7ne-5czKc",
+      "value": "511=iEOOGFjSDZyMfmwo5BNNHsn5fg4rWxvqFKM06duOgMtw-USihoySvi4isbg6WCbeT7sWfsx83i2gPQvbBUD8oZji5UKvJk3KwMqKF7XK6RemBgJT4NR8fAFHV-sTBaYjX0QdrWSf6pthiEQPmbvcWc_ZeBIuYSDfbybdOOoNGGk",
       "domain": ".google.com",
       "path": "/",
-      "expires": 1716753459.412855,
+      "expires": 1716826504.692395,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "plut",
-      "value": "676534%3Aaa9d982729e832fdfcb5b44938498eb7%3Aaca72ea54229ae9c1f7fd504b225e9745cff1a199c9accdb0d9a56dd6b3c1b33",
+      "value": "676534%3Ab00f9c30d396a2408db15f2dac25c344%3Ac0d9fc4d6a5efccb7018f23dbd457d7384314b5e36339341c7c090efae484103",
       "domain": ".pokellector.com",
       "path": "/",
-      "expires": 1702151861.127769,
+      "expires": 1702224914.910841,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_K2BQZ78QPD",
-      "value": "GS1.2.1700942260.1.1.1700942261.0.0.0",
+      "value": "GS1.2.1701015313.1.1.1701015315.0.0.0",
       "domain": ".pokellector.com",
       "path": "/",
-      "expires": 1735502261.746823,
+      "expires": 1735575315.874405,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_0CPE0JFSCT",
-      "value": "GS1.1.1700942262.1.0.1700942262.0.0.0",
+      "value": "GS1.1.1701015333.1.0.1701015333.0.0.0",
       "domain": ".pokellector.com",
       "path": "/",
-      "expires": 1735502262.916954,
+      "expires": 1735575333.357737,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga",
-      "value": "GA1.1.1355173519.1700942259",
+      "value": "GA1.1.1230030526.1701015304",
       "domain": ".pokellector.com",
       "path": "/",
-      "expires": 1735502262.918282,
+      "expires": 1735575333.360592,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
+    },
+    {
+      "name": "dnsDisplayed",
+      "value": "undefined",
+      "domain": ".pokellector.com",
+      "path": "/",
+      "expires": 1732551334.565503,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ccpaApplies",
+      "value": "false",
+      "domain": ".pokellector.com",
+      "path": "/",
+      "expires": 1732551334.566232,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "signedLspa",
+      "value": "undefined",
+      "domain": ".pokellector.com",
+      "path": "/",
+      "expires": 1732551334.566509,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
     }
   ],
   "origins": [
@@ -105,11 +135,19 @@
         },
         {
           "name": "_sp_user_consent_24490",
-          "value": "{\"ccpa\":{\"authId\":null,\"uuid\":null,\"respectGPC\":true,\"applies\":false,\"dateCreated\":\"2023-11-25T19:57:43.804Z\",\"expirationDate\":\"2024-11-24T19:57:43.804Z\",\"consentedAll\":false,\"rejectedCategories\":[],\"rejectedVendors\":[],\"rejectedAll\":false,\"status\":\"rejectedNone\",\"signedLspa\":false,\"gpcEnabled\":false,\"actions\":[]},\"gdpr\":{\"authId\":null,\"uuid\":null,\"getMessageAlways\":false,\"applies\":false},\"version\":1}"
+          "value": "{\"ccpa\":{\"authId\":null,\"uuid\":null,\"respectGPC\":true,\"applies\":false,\"dateCreated\":\"2023-11-26T16:15:34.143Z\",\"expirationDate\":\"2024-11-25T16:15:34.143Z\",\"consentedAll\":false,\"rejectedCategories\":[],\"rejectedVendors\":[],\"rejectedAll\":false,\"status\":\"rejectedNone\",\"signedLspa\":false,\"gpcEnabled\":false,\"actions\":[]},\"gdpr\":{\"authId\":null,\"uuid\":null,\"getMessageAlways\":false,\"applies\":false},\"version\":1}"
+        },
+        {
+          "name": "btUserCountry",
+          "value": "IL"
         },
         {
           "name": "_sp_non_keyed_local_state",
-          "value": "{\"ccpa\":{\"_sp_v1_data\":\"494642\",\"_sp_v1_p\":\"637\"},\"gdpr\":{\"_sp_v1_data\":\"673274\",\"_sp_v1_p\":\"938\"}}"
+          "value": "{\"ccpa\":{\"_sp_v1_data\":\"494642\",\"_sp_v1_p\":\"648\"},\"gdpr\":{\"_sp_v1_data\":\"673274\",\"_sp_v1_p\":\"768\"}}"
+        },
+        {
+          "name": "apstagCxMEnabled",
+          "value": "1"
         },
         {
           "name": "BT_AA_DETECTION",

@@ -3,6 +3,7 @@ import { beforeEach } from "node:test"
 import { main_page } from "../POM/main_page"
 import { equal } from "node:assert"
 import { config } from "node:process";
+import { searchPage } from "../POM/searchPage";
 
 
 
@@ -72,23 +73,31 @@ test.describe('My test suite', () => {
     })
 
 
-    test("paradox rift",async ()=>{
+    test("to check if the paradox rift checked cards count equal to the green count",async ()=>{
         test.setTimeout(200000)
         await page.goto("https://www.pokellector.com/")
         const main = new main_page(page)
         await main.Enter_to_paradox_rift()
-        await main.get_paradox_rift().check_elements(3) 
-        
+        // await main.get_paradox_rift().checkAllAndReload(page)
+        const cards_count = await main.get_paradox_rift().checkAndReload(page)
+        const green_count = await main.get_paradox_rift().green_count()
+        expect(cards_count).toEqual(Number(green_count))
+        // console.log(cards_count)
+        // console.log(green_count)
     })
 
+    test("to check the search bar ",async()=>{
+        test.setTimeout(200000)
+        await page.goto("https://www.pokellector.com/")
+        const main = new main_page(page)
+        await main.search_bar_input("os")
+        const search =new searchPage(page)
+        await search.get_search_info()
+
+
+    })
+
+
+
 });
-
-
-
-
-
-
-
-
-
 

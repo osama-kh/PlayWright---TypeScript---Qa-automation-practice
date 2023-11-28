@@ -3,33 +3,61 @@ import { base_page } from "./base_page";
 
 export class Paradox_rift extends base_page{
 
-    private cards ='card '
-constructor(page :Page){
-    super(page)
-    this.init()
-}
-check_elements = async(num : number)=>{
-    // await this.page.waitForSelector(".collectionbox")
-    // const elements =  this.page.locator("//div[@class = 'card ']").all()
-    const elementsWithSpecificClass = await this.page.$$('.card .checkbox');
-
-    // Log the text content of each element
-    for (const element of elementsWithSpecificClass) {
-    //   const textContent = await element.textContent();
-    console.log(element)
-      console.log('Element Text Content:', await element.isChecked());
+    
+    constructor(page :Page){
+        super(page)
+        this.init()
     }
+
+public async checkAndReload(page:Page): Promise<number> {
+
+    // const cardElements = await page.$$('.card  .checked');
+    // const cardElementss = await page.$$('.card ');
+    const cardElements = await page.locator('//div[@class="card  checked" ]').count();
+  // const cardElementss = await page.locator('//div[@class="card " ]').count();
+
+    console.log(cardElements)
+    // const green_count =await this.page.locator("//div/strong[@class='green']").textContent()
+    // console.log(await this.page.locator("//div/strong[@class='green']").textContent())
+
+    return cardElements
+    // console.log(cardElementss)
+    // for (const cardElement of cardElements) {
+    //   const textContent = await cardElement.textContent();
+    //   console.log('Card Text Content:', textContent);
   
-    // // Check the checkboxes for the specified number of elements
-    // for (let i = 0; i < num && i < elementsWithSpecificClass.length; i++) {
-        
-    //   await elementsWithSpecificClass[i].check();
+    //   const checkboxElements = await cardElement.$$('.checkbox');
+  
+    //   for (let i = 0; i < num && i < checkboxElements.length; i++) {
+    //     await checkboxElements[i].hover()
+    //     await checkboxElements[i].click()
+    //   }
     // }
+    //   await page.reload();
+  }
+  public green_count =async ()=> await this.page.locator("//div/strong[@class='green']").textContent()
+
+
+
+
   
-    // Reload the page after checking the checkboxes
-    await this.page.reload();
+public async checkAllAndReload(page: Page): Promise<void> {
+
+    const cardElements = await page.waitForSelector('//div//button[@class="checkall"]')
+    await cardElements.click()
+    // await page.locator('//div//button[@class="checkall"]').click()
+    page.on('dialog', async (dialog) => {
+        await dialog.accept();
+      });
+  
+      await page.reload();
 
 
+     console.log(await page.locator("//div/strong[@class='green']").textContent())
+  }
+  
 
 }
-}
+
+
+

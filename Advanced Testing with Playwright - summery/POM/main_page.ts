@@ -27,11 +27,25 @@ public click_on_mcdonalds_exp = async () => this.click_on_button ( this.VIEW_MOR
 
 public Enter_to_paradox_rift = async () => {
     await this.click_on_PARADOX_RIFT()
-    await this.paradox_rift.check_elements(3)
+    // await this.paradox_rift.check_elements(3)
 }
 
 get_paradox_rift =  () : Paradox_rift=> {
 return this.paradox_rift
 }
+
+
+public  async search_bar_input (text:string):Promise<void>{
+  
+const search_bar = await this.page.waitForSelector('//input [@name="criteria"]')
+await search_bar.fill(text)
+const search_button = this.page.locator('//input [@type="image"]')
+await search_button.click()
+
+}
+
+
+
+
 
 }
